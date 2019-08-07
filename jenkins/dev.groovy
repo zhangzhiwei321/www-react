@@ -1,7 +1,6 @@
 node {
 	stage('check') {
 		echo("check");
-		echo(name);
 		sh 'ls'
 		sh 'git pull origin dev'
 		sh 'git pull origin dev'
