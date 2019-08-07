@@ -24,6 +24,6 @@ node {
 	stage("release") {
 		echo("release")
 		sh "rm -rf /usr/local/nginx/web/vue/*"
-		sh "mv ./dist/* /www"
+		sh "mv ./build/* /www"
 	}
 }
