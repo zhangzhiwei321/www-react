@@ -23,7 +23,7 @@ node {
 
 	stage("release") {
 		echo("release")
-		sh "rm -rf /usr/local/nginx/web/vue/*"
+		sh "rm -rf /www/*"
 		sh "mv ./build/* /www"
 	}
 }
