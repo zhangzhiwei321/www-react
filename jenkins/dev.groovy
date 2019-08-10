@@ -11,6 +11,7 @@ node {
 	stage('install') {
 		echo("install")
 		echo(install);
+		echo(install=='true');
 		if (install=='true') {
 			sh "rm -rf node_modules*"
 			sh "cnpm i"
