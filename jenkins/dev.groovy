@@ -1,4 +1,4 @@
-echo env
+echo install
 
 
 node {
