@@ -1,4 +1,4 @@
-echo install
+echo install==true
 
 
 node {
