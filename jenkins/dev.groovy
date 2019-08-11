@@ -1,3 +1,6 @@
+echo env
+
+
 node {
 	stage('check') {
 		echo("check");
