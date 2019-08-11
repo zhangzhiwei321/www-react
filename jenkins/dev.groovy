@@ -3,19 +3,13 @@ node {
 		echo("check");
 		sh 'ls'
 		sh 'git pull origin dev'
-		sh 'git pull origin dev'
 		sh 'git status'
 		sh 'git branch'
 		sh 'git checkout dev'
 	}
 	stage('install') {
-		echo("install")
-		try{
-		echo("${install}");
-		}catch(e){
-			echo(${test});
-		}		
-		if (install) {
+		echo("install")	
+		if ("${install}") {
 			sh "rm -rf node_modules*"
 			sh "cnpm i"
 		}
