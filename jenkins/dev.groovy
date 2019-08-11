@@ -10,7 +10,12 @@ node {
 	}
 	stage('install') {
 		echo("install")
-		echo(test);
+		echo(${parameter_name});
+		try{
+		echo("${install}");
+		}catch(e){
+			echo("${test}");
+		}		
 		if (install) {
 			sh "rm -rf node_modules*"
 			sh "cnpm i"
