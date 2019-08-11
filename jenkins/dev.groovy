@@ -1,6 +1,3 @@
-echo install==true
-
-
 node {
 	stage('check') {
 		echo("check");
