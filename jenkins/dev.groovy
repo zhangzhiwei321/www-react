@@ -10,11 +10,10 @@ node {
 	}
 	stage('install') {
 		echo("install")
-		echo(${parameter_name});
 		try{
 		echo("${install}");
 		}catch(e){
-			echo("${test}");
+			echo(${test});
 		}		
 		if (install) {
 			sh "rm -rf node_modules*"
