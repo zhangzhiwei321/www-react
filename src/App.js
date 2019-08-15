@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from 'https://6d69-missubear-developmen-1256962785.tcb.qcloud.la/images/af458f4e082a2f28611ab887fbe0da8e.jpg?sign=2cba34ba633b0790218d10e30318936b&t=1565851935'//'./logo.svg';
 import './App.css';
 
 function App() {
