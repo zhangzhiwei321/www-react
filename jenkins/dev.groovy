@@ -1,14 +1,10 @@
 node {
 	stage('check') {
 		echo("check");
-		sh 'ls'
-		sh 'git pull origin dev'
-		sh 'git status'
-		sh 'git branch'
-		sh 'git checkout dev'
+		git url: 'git@github.com:zhangzhiwei321/www-react.git', branch: 'dev'
 	}
 	stage('install') {
-		echo("install")	
+		echo("install")
 		echo("${install}")
 		if (params.install) {
 			sh "rm -rf node_modules*"
