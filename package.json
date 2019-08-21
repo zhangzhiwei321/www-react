@@ -146,6 +146,8 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.12.0",
-    "redux-devtools": "^3.5.0"
+    "node-sass": "^4.12.0",
+    "redux-devtools": "^3.5.0",
+    "sass-loader": "^7.1.0"
   }
 }
