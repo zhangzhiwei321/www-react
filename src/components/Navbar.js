@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import { Menu, Icon } from 'antd';
 
 const { SubMenu } = Menu;
