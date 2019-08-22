@@ -1,9 +1,20 @@
 import React from 'react';
 import { Menu, Icon } from 'antd';
-
+import {
+    HashRouter,
+    BrowserRouter,
+    Switch,
+    Route,
+    Router,
+    NavLink,
+    withRouter
+} from 'react-router-dom';
 const { SubMenu } = Menu;
-
 class Navbar extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props) {
+        super(props);
+    };
     state = {
         current: 'index',
     };
@@ -11,23 +22,26 @@ class Navbar extends React.Component {
     handleClick = e => {
         console.log('click', e);
         this.setState({
-            current: e.key,
+            current: e.key
         });
+        console.log(this.props)
+        // this.props.history.push('/home')
     };
     render() {
         return (
             <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                 <Menu.Item key="index">
-                    首页
-            </Menu.Item>
+                    <NavLink to={'/'}>首页</NavLink>
+                </Menu.Item>
                 <Menu.Item key="not-open" disabled>
-                    暂未开放
-            </Menu.Item>
+                    <NavLink to={'/'}>暂未开放</NavLink>
+                </Menu.Item>
                 <SubMenu
                     title={
                         <span className="home">
-                            我的乐园
-                </span>
+                            <NavLink to={'/home'}>我的乐园</NavLink>
+
+                        </span>
                     }
                 >
                     <Menu.ItemGroup title="Item 1">
@@ -40,13 +54,11 @@ class Navbar extends React.Component {
                     </Menu.ItemGroup>
                 </SubMenu>
                 <Menu.Item key="about">
-
-                    关于
-
+                    <NavLink to={'/about'}>关于</NavLink>
                 </Menu.Item>
             </Menu>
         )
     }
 }
 
-export { Navbar }
+export default withRouter(Navbar);

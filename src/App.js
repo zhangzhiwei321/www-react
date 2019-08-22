@@ -1,24 +1,32 @@
-import React from 'react';
-import { Navbar } from './components/Navbar'
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import {
 	DatePicker
 } from 'antd';
 
 import './App.scss';
 
-function App() {
-	return (<div className="App" >
-		<header className="App-header">
-			<div className="App-logo"></div>
-			<div className="App-logo App_logo"></div>
-			<Navbar></Navbar>
-		</header >
-		<article>
-			<DatePicker></DatePicker>
-			<h2>ლ(′◉❥◉｀ლ)</h2>
-		</article>
-	</div>
-	);
+class App extends Component {
+
+	constructor(props) {
+		super(props);
+		console.log(props)
+	}
+	render(h) {
+		return (
+			<div className="App" >
+				<header className="App-header">
+					<div className="App-logo"></div>
+					<div className="App-logo App_logo"></div>
+				</header >
+				<article>
+					{/* <DatePicker></DatePicker> */}
+					<h2>ლ(′◉❥◉｀ლ)</h2>
+				</article>
+			</div>
+		);
+	};
+
 }
 
-export default App;
+export default withRouter(App);
