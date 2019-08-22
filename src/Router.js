@@ -20,7 +20,7 @@ class BasicRouter extends Component {
 
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<Navbar nav={this.props}></Navbar>
 				<Switch>
 					<Route exact path="/" component={App} />
@@ -28,7 +28,7 @@ class BasicRouter extends Component {
 					<Route exact path="/home" component={Home} />
 					<Route exact path="/about" component={About} />
 				</Switch >
-			</BrowserRouter>
+			</HashRouter>
 		)
 	}
 
