@@ -30,6 +30,7 @@ class About extends React.Component {
             </div>
         )
     };
+    // eslint-disable-next-line no-dupe-class-members
     componentDidMount() {
         setInterval(() => {
             this.props.PayIncrease()
