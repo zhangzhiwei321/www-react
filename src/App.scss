@@ -34,6 +34,14 @@ header {}
   color: #61dafb;
 }
 
+.record {
+  color: black;
+  font-size: 28px;
+  position: absolute;
+  bottom: 0;
+  left:calc(50% - 100px) ;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
