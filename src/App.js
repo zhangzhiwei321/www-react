@@ -23,6 +23,7 @@ class App extends Component {
 					{/* <DatePicker></DatePicker> */}
 					<h2>ლ(′◉❥◉｀ლ)</h2>
 				</article>
+				<a href="http://beian.miit.gov.cn/?token=72a719e6-69e0-4a1f-8c46-82fd767bc80c">京ICP备18046886号-1</a>
 			</div>
 		);
 	};
